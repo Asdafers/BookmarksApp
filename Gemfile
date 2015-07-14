@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 # Gems I added
 gem 'devise'
+gem 'zurb-foundation'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
