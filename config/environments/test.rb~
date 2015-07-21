@@ -1,11 +1,17 @@
 Rails.application.configure do
   require 'capybara/rails'
-  require 'webrat'
+  require "capybara"
+  require "capybara/cucumber"
+  require "rspec"
+  require "rspec/rails"
+  require "cucumber/rails"
 
-  Webrat.configure do |config|
-    config.mode = :rails
-  end
-
+World do
+  Capybara.app = Application
+  
+  include Capybara::DSL
+  include RSpec::Matchers
+end
   # Settings specified here will take precedence over those in config/application.rb.
 
   # The test environment is used exclusively to run your application's

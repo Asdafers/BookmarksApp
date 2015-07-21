@@ -1,6 +1,19 @@
 Rails.application.configure do
+  require_relative "../../config/environment"
+  require_relative "../../config/application"
   require 'capybara/rails'
+  require "capybara"
+  require "capybara/cucumber"
+  require "rspec"
+  require "rspec/rails"
+  require "cucumber/rails"
 
+World do
+  Capybara.app = BookmarksApp
+  
+  include Capybara::DSL
+  include RSpec::Matchers
+end
   # Settings specified here will take precedence over those in config/application.rb.
 
   # The test environment is used exclusively to run your application's

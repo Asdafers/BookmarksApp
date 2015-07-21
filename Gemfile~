@@ -1,11 +1,16 @@
 source 'https://rubygems.org'
 
 # Gems I added
+gem 'capybara'
+gem 'selenium-webdriver', :require => false
+gem 'cucumber'
+gem 'rspec'
 gem 'devise'
 gem 'zurb-foundation'
 gem 'simple_form'
-gem 'capybara'
-gem 'webrat'
+gem "cucumber-rails", :require => false
+gem 'rspec-rails', :require => false
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
@@ -47,5 +52,5 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-end
 
+end
